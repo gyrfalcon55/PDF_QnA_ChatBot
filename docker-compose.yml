@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+
+  pdf_chatbot:
+    build: .
+    container_name: pdf_chatbot
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - LANGSMITH_API_KEY=${LANGSMITH_API_KEY}
+      - LANGSMITH_TRACING_URL=${LANGSMITH_TRACING_URL}
+      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
+      - LANGSMITH_TRACING=${LANGSMITH_TRACING}
+    depends_on:
+      - ollama
+    restart: always
+
+volumes:
+  ollama_data:
