@@ -26,8 +26,10 @@ st.write("Upload a PDF and chat with its content.")
 
 session_id = st.text_input("Session ID", value="default_session")
 
-llm = ChatOllama(model="gemma3:1b", base_url="http://ollama:11434")
-embeddings = OllamaEmbeddings(model="nomic-embed-text")
+# Use localhost because Ollama runs in the same container
+llm = ChatOllama(model="gemma3:1b", base_url="http://127.0.0.1:11434")
+embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url="http://127.0.0.1:11434")
+
 
 if "store" not in st.session_state:
     st.session_state.store = {}
