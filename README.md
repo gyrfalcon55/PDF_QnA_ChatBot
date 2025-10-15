@@ -36,6 +36,13 @@ A **PDF Chatbot** that allows users to upload PDF documents and chat with their 
 
 ---
 
+## **Link To Access Website**
+```
+http://13.201.81.35:8501/
+```
+
+---
+
 ## **Setup & Run Locally**
 
 ### **Prerequisites**
