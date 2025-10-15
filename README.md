@@ -57,7 +57,7 @@ http://13.201.81.35:8501/
 1. **Clone the repository**
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/gyrfalcon55/PDF_QnA_ChatBot.git
 cd pdf-chatbot
 ```
 2. **run the command to install requirements**
