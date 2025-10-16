@@ -34,12 +34,6 @@ A **PDF Chatbot** that allows users to upload PDF documents and chat with their 
 5. The chatbot retrieves relevant chunks, reformulates questions if needed, and answers concisely.  
 6. Conversation history is maintained for context-aware answers.  
 
----
-
-## **Link To Access Website**
-```
-http://13.201.81.35:8501/
-```
 
 ---
 
